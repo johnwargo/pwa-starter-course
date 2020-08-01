@@ -12,23 +12,15 @@ If you run into trouble, the completed exercise is in the repo's `01-service-wor
 
 ## Exercise Instructions
 
-[ ] Open the project's `index.html` file and add the following code to the end of the `<head>` section of the file:
+Open the project's `index.html` file and add the following code to the end of the `<head>` section of the file:
 
 ```html
  <script>
     // does the browser support service workers?
-    if ('serviceWorker' in navigator) {
-      // fires when the service worker is ready
-      navigator.serviceWorker.ready.then(reg => {
-        // we have an active service worker working for us
-        console.log(`Service Worker ready (Scope: ${reg.scope})`);
-        // do something interesting, if you want...
-
-      });
-      // then register our service worker
+    if ('serviceWorker' in navigator) {      
+      // register the service worker (notice the capital W)
       navigator.serviceWorker.register('./sw.js')
         .then(function (reg) {
-          // display a success message
           console.log(`Service Worker Registration (Scope: ${reg.scope})`);
         })
         .catch(function (error) {
@@ -40,6 +32,22 @@ If you run into trouble, the completed exercise is in the repo's `01-service-wor
       console.warn('Service Worker not available');
     }
   </script>
+```
+
+This code validates that the browser supports service workers, then registers the service worker.
+
+**Note:** You can also put this code in a separate JavaScript file and load that file from the `index.html` file. 
+
+If you'd like to see something written to the console when the service worker activates, add the following code before the call to `navigator.serviceWorker.register`:
+
+```javascript
+// fires when the service worker is ready
+navigator.serviceWorker.ready.then(reg => {
+  // we have an active service worker working for us
+  console.log(`Service Worker ready (Scope: ${reg.scope})`);
+  // do something interesting here, if you want...
+
+});
 ```
 
 
