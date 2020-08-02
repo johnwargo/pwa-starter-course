@@ -1,7 +1,7 @@
 // service worker version number
 const SW_VERSION = 1;
 // the root name for our cache
-const CACHE_ROOT = 'pwa-learn-cache'
+const CACHE_ROOT = 'pwa-starter-cache'
 // generates a custom cache name per service worker version
 const CACHE_NAME = `${CACHE_ROOT}-v${SW_VERSION}`;
 

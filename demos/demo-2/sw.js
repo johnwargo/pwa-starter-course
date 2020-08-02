@@ -17,7 +17,7 @@ self.addEventListener('install', event => {
     // before considering this service worker installed
     event.waitUntil(
         // create a local cache for our app resources
-        caches.open('pwa-learn-cache')
+        caches.open('pwa-starter-cache')
             // Once it's open...
             .then(cache => {
                 console.log('SW: Cache opened');
