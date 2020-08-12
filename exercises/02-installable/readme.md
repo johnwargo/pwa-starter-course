@@ -36,7 +36,7 @@ In the the project's root folder, create a new file called `app.webmanifest` the
       "type": "image/png"
     }
   ],
-  "start_url": "/index.html",
+  "start_url": "/index.html?source=pwa",
   "display": "",
 }
 ```
@@ -114,7 +114,6 @@ installButton.style.display = 'block';
 
 What you've done so far is setup the app so it can manage the installation. Next we'll add code that performs the installation when the user taps the Install button. Add the following block of code to the file:
 
-
 ```javascript
 function doInstall() {
   console.log('doInstall');
@@ -142,5 +141,31 @@ In this code, the following happens:
 1. Called the `prompt` method on the `deferredPrompt` object we captured earlier. This invokes the browser's mechanism for installing the app.
 1. When the user makes a selection in the browser's installation prompt, we write some text to the console indicating whether the user completed the installation or not.
 1. Finally we clear the `deferredPrompt` variable since we don't need it anymore.
-1. 
-1. 
+
+If you remember from the start of this exercise, the manifest file's `start_url` has an extra parameter on the URL:
+
+```json
+"start_url": "/index.html?source=pwa",
+```
+
+The `?source=pwa` tells the web app that it was launched from a PWA.
+
+> Note: The query string parameter can be whatever you want, you'll find most examples online use `?utm_source=pwa` but the result is the same.
+
+To deal with this extra parameter, add a little more code to the `js/main.js` file:
+
+```javascript
+// did we launch as a PWA?
+var urlParams = new URLSearchParams(window.location.search);
+// look for the source parameter, if it's `pwa` then it's installed
+if (urlParams.get('source') === 'pwa') {
+  // add the PWA moniker to the title
+  let theTitle = document.getElementById('title');
+  theTitle.innerHTML = theTitle.innerHTML + ' (PWA)';
+}
+```
+
+This code checks the app URL looking for `pwa` in the `source` parameter, then changes the title of the app to indicate how it was launched as shown in the following figure:
+
+![PWA Launched](images/image-01.png)
+
