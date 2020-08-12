@@ -205,6 +205,8 @@ This means that the server is serving the current folder on port `8080`. At this
 
 If you open developer tools in the browser and look at the console, you'll see the message indicating that the `beforeInstallPrompt` event fired.
 
+![Developer Tools](images/image-03.png)
+
 Click the Install button and watch what happens.
 
 If you have any issues with this exercise, remember that the completed app is in the repo's `exercises/02-installable/tip-calculator-end` folder.
