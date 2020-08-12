@@ -14,7 +14,7 @@ git clone https://github.com/johnwargo/pwa-starter-course
 
 In the cloned repo, the sample application used for this exercise is in a folder called `exercises/01-service-workers/tip-calculator-start`, make a copy of that folder and work in the copy for this exercise.
 
-If you run into trouble, the completed exercise is in the repo's `01-service-workers/tip-calculator-end` folder.
+If you run into trouble, the completed exercise is in the repo's `exercises/01-service-workers/tip-calculator-end` folder.
 
 ## Exercise Instructions
 
