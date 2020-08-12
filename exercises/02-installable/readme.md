@@ -165,7 +165,46 @@ if (urlParams.get('source') === 'pwa') {
 }
 ```
 
-This code checks the app URL looking for `pwa` in the `source` parameter, then changes the title of the app to indicate how it was launched as shown in the following figure:
+This code checks the app URL looking for `pwa` in the `source` parameter, then changes the title of the app to indicate how it was launched as shown in the mobile version of the app shown in following figure. You can indicate this any way you want, even dramatically changing the behavior of the app depending on whether its the default web app or a PWA running.
 
 ![PWA Launched](images/image-01.png)
 
+## Testing The Code
+
+With all of the code in place, lets test it out.
+
+Remember, a web app can only use a service worker if the app loads over a secure connection, or loads from the system's localhost (http://127.0.0.1). For this to work, you'll have to host the app on a server with a secure connection or on a local web server. If you have either of those options in place, go ahead and load the app in the browser from one of those server options.
+
+Another option is to run a local web server on [Node.js](https://nodejs.org). using [http-server](https://www.npmjs.com/package/http-server). If you don't have Node installed, go ahead and install it. With Node installed, install the `http-server` task by opening a command prompt or terminal window and executing the following command:
+
+```shell
+npm install -g http-server
+```
+
+When the module installs correctly, navigate to the project folder for this exercise and execute the following command:
+
+```shell
+http-server
+```
+
+The server will load, then display the following output:
+
+```text
+Starting up http-server, serving ./
+Available on:
+  http://192.168.86.56:8080
+  http://192.168.83.1:8080
+  http://192.168.189.1:8080
+  http://127.0.0.1:8080
+Hit CTRL-C to stop the server
+```
+
+This means that the server is serving the current folder on port `8080`. At this point, you can open your browser of choice and navigate to `http://localhost:8080` to open the app. When the app opens, nothing special will happen, but after you've refreshed the page a few times, the browser recognizes that you're interested in the app and fires that `beforeInstallPrompt` event discussed earlier. The result is an unhidden Install button and a user initiated installation process shown in the following figure:
+
+![Installable PWA](images/image-02.png)
+
+If you open developer tools in the browser and look at the console, you'll see the message indicating that the `beforeInstallPrompt` event fired.
+
+Click the Install button and watch what happens.
+
+If you have any issues with this exercise, remember that the completed app is in the repo's `exercises/02-installable/tip-calculator-end` folder.

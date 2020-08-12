@@ -109,7 +109,7 @@ The code you just added adds event listeners for the three main service worker e
 
 ## Testing The Code
 
-With all of the code in place, lets test it out. 
+With all of the code in place, lets test it out. \
 
 Remember, a web app can only use a service worker if the app loads over a secure connection, or loads from the system's localhost (http://127.0.0.1). For this to work, you'll have to host the app on a server with a secure connection or on a local web server. If you have either of those options in place, go ahead and load the app in the browser from one of those server options.
 
