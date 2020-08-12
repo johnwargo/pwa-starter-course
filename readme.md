@@ -12,7 +12,7 @@ This repository contains the student source course files for the **Progressive W
 
 ## Course Resources
 
-This section contains links included in the course presentations, so you can quickly access them without having to copy them down or Google them.
+This section lists all of the links listed in the course presentations, so you can quickly access them without having to copy them down or Google them.
 
 ### Lesson 1: Introduction
 
