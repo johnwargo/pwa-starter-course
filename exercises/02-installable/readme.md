@@ -57,7 +57,7 @@ Next, open the project's `index.html` file and add an install button to the app'
 
 The styling for the button is already in the app's CSS, but if you're using your own web app for this exercise, you'll want to style the button appropriately. In this example, the Install button remains hidden until the app is ready to install.
 
-Save the changes to the project's `index.html` file.
+Save the changes to the `index.html` file.
 
 Now we must add code to interact with that button we just added. In the project's `js/main.js` file, add the following code:
 
@@ -92,8 +92,27 @@ window.addEventListener('beforeinstallprompt', event => {
 });
 ```
 
-This code 
+This code handles capturing the browser-fired before installation event so we can invoke it later when the user clicks or taps our Install button. In the following line:
 
+```javascript
+event.preventDefault();
+```
+
+We're telling the browser, don't show its default Installation UI. Next, we capture the install event in:
+
+```javascript
+deferredPrompt = event;
+```
+
+We'll invoke the installation later using the `deferredPrompt` object.
+
+Finally we unhide the Install button so the user can tap it when they want:
+
+```javascript
+installButton.style.display = 'block';
+```
+
+What you've done so far is setup the app so it can manage the installation. Next we'll add code that performs the installation when the user taps the Install button. Add the following block of code to the file:
 
 
 ```javascript
@@ -117,3 +136,11 @@ function doInstall() {
 }
 ```
 
+In this code, the following happens:
+
+1. Hide the Install button - the user's clicked it, so we won't need it again
+1. Called the `prompt` method on the `deferredPrompt` object we captured earlier. This invokes the browser's mechanism for installing the app.
+1. When the user makes a selection in the browser's installation prompt, we write some text to the console indicating whether the user completed the installation or not.
+1. Finally we clear the `deferredPrompt` variable since we don't need it anymore.
+1. 
+1. 
