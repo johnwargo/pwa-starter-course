@@ -1,7 +1,0 @@
-# Service Worker Resources
-
-* [Application Cache is a Douchebag](https://alistapart.com/article/application-cache-is-a-douchebag/)
-* [Cache Interface](https://developer.mozilla.org/en-US/docs/Web/API/Cache)
-* [PWABuilder](https://www.pwabuilder.com/)
-* [Tip Calculator Test](https://tip-calc-test.netlify.app/)
-* [Tip Calculator](https://learningpwa.com/tipcalc/)
