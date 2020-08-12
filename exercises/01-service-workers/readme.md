@@ -6,7 +6,13 @@ In this exercise, you'll add a very simple service worker to a web application. 
 
 ## Using the Sample App Included with the Course
 
-To use the source project included with the student files, clone the following GitHub repository to your local development system: `https://github.com/johnwargo/pwa-starter-course`.  In the cloned repo, the sample application used for this exercise is in a folder called `01-service-workers/tip-calculator-start`, make a copy of that folder and work in the copy for this exercise. 
+To use the source project included with the student files, clone this GitHub repository to your local development system by opening a terminal window or command prompt and executing the following command:
+
+```shell
+git clone https://github.com/johnwargo/pwa-starter-course
+```
+
+In the cloned repo, the sample application used for this exercise is in a folder called `exercises/01-service-workers/tip-calculator-start`, make a copy of that folder and work in the copy for this exercise.
 
 If you run into trouble, the completed exercise is in the repo's `01-service-workers/tip-calculator-end` folder.
 

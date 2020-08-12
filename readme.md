@@ -12,7 +12,7 @@ This repository contains the student source course files for the **Progressive W
 
 ## Course Resources
 
-This section lists all of the links listed in the course presentations, so you can quickly access them without having to copy them down or Google them.
+This section lists all of the links referenced in the course presentations, so you can quickly access them without having to copy them down or Google them.
 
 ### Lesson 1: Introduction
 
@@ -32,7 +32,7 @@ This section lists all of the links listed in the course presentations, so you c
 * [Tip Calculator Test](https://tip-calc-test.netlify.app/)
 * [Tip Calculator](https://learningpwa.com/tipcalc/)
 
-### Lesson 3: Installables
+### Lesson 3: Installable Web Apps
 
 * [Web App Manifests](https://developer.mozilla.org/en-US/docs/Web/Manifest)
 
