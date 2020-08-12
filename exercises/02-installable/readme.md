@@ -93,3 +93,27 @@ window.addEventListener('beforeinstallprompt', event => {
 ```
 
 This code 
+
+
+
+```javascript
+function doInstall() {
+  console.log('doInstall');
+  // we've tapped the install button, so hide it
+  installButton.style.display = 'none';
+  // execute the deferred installation prompt
+  deferredPrompt.prompt();
+  // wait for the response from the deferred prompt
+  deferredPrompt.userChoice.then(res => {
+    // did the user approve installation?
+    if (res.outcome === 'accepted') {
+      console.log('doInstall: accepted');
+    } else {
+      console.log('doInstall: declined');
+    }
+    // clear the deferred prompt object so we can only do this once
+    deferredPrompt = null;
+  });
+}
+```
+
