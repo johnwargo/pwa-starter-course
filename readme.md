@@ -1,14 +1,14 @@
 # Progressive Web Apps Starter Course
 
-This repository contains the student source course files for the **Progressive Web Apps: Enhancing Your Web Apps Using Service Workers** webinar. You'll use these files during the webinar to turbo-charge a web app with service workers.
-
-**Note:** Links used throughout the presentation are included in a `resources.md` file located in each exercise folder.
+This repository contains the participant source files for the **Progressive Web Apps: Enhancing Your Web Apps Using Service Workers** webinar. You'll use these files during the webinar to turbo-charge a web app with service workers.
 
 ## Prerequisites
 
-* Install a code editor such as [Visual Studio Code](https://code.visualstudio.com/)
-* Install [Node.js](https://nodejs.org/). You should already have this installed as Node.js is core to most modern web development approaches. 
-* Install a local HTTP server such as [HTTP-Server](https://www.npmjs.com/package/http-server) (Requires Node.js)
+If you want to follow-along with the code, you'll need the following:
+
+* A code editor such as [Visual Studio Code](https://code.visualstudio.com/)
+* [Node.js](https://nodejs.org/). You should already have this installed as Node.js is core to most modern web development approaches. 
+* A local HTTP server such as [HTTP-Server](https://www.npmjs.com/package/http-server) (Requires Node.js)
 
 ## Course Resources
 
