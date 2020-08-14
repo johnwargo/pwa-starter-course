@@ -1,7 +1,7 @@
 // service worker version number
 const SW_VERSION = 1;
 // generates a custom cache name per service worker version
-const CACHE_NAME = `pwa-starter-cache-v${SW - VERSION}`;
+const CACHE_NAME = `pwa-starter-cache-v${SW_VERSION}`;
 
 var urlList = [
     '/',
